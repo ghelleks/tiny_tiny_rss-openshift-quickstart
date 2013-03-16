@@ -4,11 +4,11 @@
 	// *******************************************
 
 	define('DB_TYPE', "pgsql"); // or mysql
-	define('DB_HOST', $_ENV['OPENSHIFT_POSTGRESQL_DB_HOST'] );
-	define('DB_USER', $_ENV['OPENSHIFT_POSTGRESQL_DB_USERNAME'] );
-	define('DB_NAME', $_ENV['OPENSHIFT_APP_NAME'] );
-	define('DB_PASS', $_ENV['OPENSHIFT_POSTGRESQL_DB_PASSWORD'] );
-	//define('DB_PORT', '5432'); // when neeeded, PG-only
+	define('DB_HOST', getenv('OPENSHIFT_POSTGRESQL_DB_HOST') );
+	define('DB_USER', getenv('OPENSHIFT_POSTGRESQL_DB_USERNAME') );
+	define('DB_NAME', getenv('OPENSHIFT_APP_NAME') );
+	define('DB_PASS', getenv('OPENSHIFT_POSTGRESQL_DB_PASSWORD') );
+	define('DB_PORT', getenv('OPENSHIFT_POSTGRESQL_DB_PORT') ); // when neeeded, PG-only
 
 	define('MYSQL_CHARSET', 'UTF8');
 	// Connection charset for MySQL. If you have a legacy database and/or experience
